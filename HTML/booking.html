@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"> <title>project</title>
+        <link rel="stylesheet" href="/CSS/style.css">
+        <script src="/JS/script.js" defer></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+    <body>
+       
+       <header class="main-header">
+    <div class="header-container">
+        <div class="logo-area">
+            <img src="/MEDIA/header-logo.png" alt="وزارة الحج والعمرة" class="logo">
+        </div>
+    <nav class="navbar">
+        <a href="index.html">HOME</a>
+        <a href="aboutUS.html">ABOUT US</a>
+        <a href="contactUS.html">CONTACT US</a>
+        <a href="campaigns.html">CAMPAIGNS</a>
+        <a href="booking.html">BOOKING</a>
+        <a href="viewBooking.html">VIEW BOOKINGS</a> 
+    </nav>
+    </div>
+</header>
+        <h1 class="center">Fill Your Information TO Complete The Booking </h1>
+
+        <form class="form booking-form" action="/insertBooking" method="post" autocomplete="on">            
+
+            <p>
+                <label>Full Name:</label>
+                <input type="text" name="fullname" minlength="2" maxlength="30" required 
+                pattern="[A-Za-z ]+" 
+                title="Please enter letters (Arabic or English) and spaces only.">
+            </p>
+
+            <p>
+                <label>Mobile:</label>
+                <input type="tel" name="mobile" maxlength="10" minlength="10" pattern="[0-9]{10}" placeholder="05xxxxxxxx" required>
+            </p>
+
+            <p>
+                <label>Email</label>
+                <input type="email" name="email" pattern="[a-z0-9]+@[a-z]+\.[a-z]{2,4}" placeholder="name@gmail.com" required>
+
+            </p>
+
+            <p>
+                <label>Date OF Birth</label>
+                <input type="date" name="dob" required>
+            </p>
+
+            <p>
+            <label for="campaign_type">Campaign Type:</label>
+            <select id="campaign_type" name="campaign_selection" required>
+             <option value="gold">Gold</option>
+             <option value="silver">Silver</option>
+             <option value="economy">Economy</option>
+            </select>
+            </p>
+
+           <p>
+           <label>Type of Trip Required : </label>
+           <label>Umrah
+           <input name = "trip_type" type = "radio"
+           value = 'Umrah' required></label> 
+
+           <label>Hajj
+           <input name = "trip_type" type = "radio"
+           value = 'Hajj' ></label> 
+            </p>
+
+            <p>
+                <label>Guide language:</label>
+                <input type="text" name="guide_language" maxlength="30" placeholder="Write your preferred language" required>
+            </p>
+            <p>
+                <label for="special_requests">Special Requests:</label>
+                <textarea id="special_requests" name="special_requests" rows="4" cols="50" maxlength="225"
+                    placeholder="Enter any special requests here..."></textarea>
+            </p>
+            <p>
+                <input type="submit" value="submit">
+            </p>
+        </form>
+
+        <footer class="footer">YUSSER - web dvelopment project 2025</footer>
+
+    </body>
+</HTML>

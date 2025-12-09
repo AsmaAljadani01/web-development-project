@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"> <title>project</title>
+        <link rel="stylesheet" href="/CSS/style.css">
+        <script src="/JS/script.js" defer></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+    <body>
+       
+       <header class="main-header">
+    <div class="header-container">
+        <div class="logo-area">
+            <img src="/MEDIA/header-logo.png" alt="وزارة الحج والعمرة" class="logo">
+        </div>
+    <nav class="navbar">
+        <a href="index.html">HOME</a>
+        <a href="aboutUS.html">ABOUT US</a>
+        <a href="contactUS.html">CONTACT US</a>
+        <a href="campaigns.html">CAMPAIGNS</a>
+        <a href="booking.html">BOOKING</a>
+        <a href="viewBooking.html">VIEW BOOKINGS</a> 
+    </nav>
+    </div>
+</header>
+
+
+        <h1 class="center">Contact Us</h1>
+
+        <form class="form contact-form" action="/insertContact" method = "post" autocomplete="on">            
+
+           <p> <label>first name:</label>
+            <input type="text" name="first_name" minlength="2" required pattern="[A-Za-z ]+" title="Please enter letters (English) and spaces only." >
+            </p>
+
+          <p> <label>last name:</label>
+            <input type="text" minlength="2" name="last_name" required pattern="[A-Za-z ]+" title="Please enter letters (English) and spaces only.">
+           </p> 
+
+           <p>
+            <label>GENDER:</label>
+           <label>Male
+           <input name = "gender" type = "radio"
+           value = "Male" required></label> 
+
+           <label>Female
+           <input name = "gender" type = "radio"
+           value = "Female" ></label> 
+            </p>
+
+
+           <p>
+            <label>mobile</label>
+            <input type="tel" name="mobile" maxlength="10" minlength="10" pattern="[0-9]{10}" placeholder="05xxxxxxxx" required>
+            </p>
+
+            <p>
+                <label>Date OF Birth</label>
+                <input type="date" name="dob" required> </p>
+
+            <p>
+                <label>Email</label>
+                <input type="email" name="email" pattern=[a-z0-9]+@[a-z]+\.[a-z]{2,4} placeholder="name@gmail.com" required>
+            </p>
+            <p>
+            <label>Service language : </label>
+           <label>English
+           <input name = "language" type = "radio"
+           value = "English" required ></label> 
+
+           <label>Arabic
+           <input name = "language" type = "radio"
+           value = "Arabic" ></label> 
+
+           <label>French
+           <input name = "language" type = "radio"
+           value = "French" ></label> 
+
+           <label>Other
+           <input name = "language" type = "radio"
+           value = "other" ></label> 
+            </p>
+            <p>
+                <label>Message:</label>
+                <textarea name="message" rows="5" cols="50" minlength="5" placeholder="Write your message here..." required></textarea>
+            </p>
+            <p>
+                <input type="submit" value="submit">
+            </p>
+
+
+        </form>
+
+        <footer class="footer">YUSSER - web dvelopment project 2025</footer>
+
+    </body>
+</html>
